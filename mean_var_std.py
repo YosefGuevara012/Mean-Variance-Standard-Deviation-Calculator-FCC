@@ -17,6 +17,14 @@ def mean(matrix):
 
   axis1 = matrix.mean(axis = 0)
   axis2 = matrix.mean(axis = 1)
-  flattened = (axis1.mean() + axis2.mean()) / 2
+  flattened = np.append(axis1,axis2).mean()
+
+  return [list(axis1), list(axis2), flattened]
+
+def variance(matrix):
+
+  axis1 = matrix.var(axis = 0)
+  axis2 = matrix.var(axis = 1)
+  flattened = np.append(axis1,axis2).var()
 
   return [list(axis1), list(axis2), flattened]
