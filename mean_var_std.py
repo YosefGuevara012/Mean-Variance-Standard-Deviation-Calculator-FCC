@@ -3,15 +3,31 @@ import numpy as np
 def calculate(list):
 
 ##  Reshaping the list to a matrix
-  my_array = np.array(list)
-  my_matrix = my_array.reshape(3,3)
+  print(len(list))
+
+  if len(list) != 9:
+
+    return "List must contain nine numbers."
+
+  else:
+
+    my_array = np.array(list)
+    my_matrix = my_array.reshape(3,3)
+    calculations ={
+
+    'mean': mean(my_matrix),
+    'variance': variance(my_matrix),
+    'standard deviation':std(my_matrix),
+    'max': max(my_matrix),
+    'min': min(my_matrix),
+    'sum': sum(my_matrix),
+    }
+
+    return calculations
+  
+
 
   
-  print("AQUI")
-  print(sum(my_matrix))
-
-
-  # return calculations
 
 def mean(matrix):
 
