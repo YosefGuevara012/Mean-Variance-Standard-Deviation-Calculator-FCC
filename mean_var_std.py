@@ -8,7 +8,7 @@ def calculate(list):
 
   
   print("AQUI")
-  print(stdv(my_matrix))
+  print(sum(my_matrix))
 
 
   # return calculations
@@ -29,10 +29,34 @@ def variance(matrix):
 
   return [list(axis1), list(axis2), flattened]
 
-def stdv(matrix):
+def std(matrix):
 
   axis1 = matrix.std(axis = 0)
   axis2 = matrix.std(axis = 1)
   flattened = matrix.std()
 
   return [list(axis1), list(axis2), flattened]
+
+def max(matrix):
+
+  axis1 = matrix.max(axis = 0)
+  axis2 = matrix.max(axis = 1)
+  flattened = matrix.max()
+
+  return [list(axis1), list(axis2), flattened]
+
+def min(matrix):
+
+  axis1 = matrix.min(axis = 0)
+  axis2 = matrix.min(axis = 1)
+  flattened = matrix.min()
+
+  return [list(axis1), list(axis2), flattened]
+
+def sum(matrix):
+
+  axis1 = matrix.sum(axis = 0)
+  axis2 = matrix.sum(axis = 1)
+  flattened = matrix.sum()
+
+  return [list(axis1), list(axis2), flattened] 
