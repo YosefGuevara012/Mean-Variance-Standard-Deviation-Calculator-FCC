@@ -3,11 +3,10 @@ import numpy as np
 def calculate(list):
 
 ##  Reshaping the list to a matrix
-  print(len(list))
-
+  
   if len(list) != 9:
 
-    return "List must contain nine numbers."
+    raise ValueError('List must contain nine numbers.')
 
   else:
 
